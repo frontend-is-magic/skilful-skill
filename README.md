@@ -18,6 +18,10 @@ Skilful Skill is a project for organizing, maintaining, and distributing multipl
 - File names and directory structure should stay stable to make agent retrieval easier.
 - Important behavior should be explicit to reduce hidden assumptions.
 
+## Skills
+
+- [`mvp-creator`](skills/mvp-creator/SKILL.md): Plans, initializes, and extends TypeScript MVP projects across Web frontend, Backend, Fullstack, Electron, and React Native workflows.
+
 ## Current Status
 
-This is the initial version of the project. Skill directories, templates, examples, and contribution guidelines will be added over time.
+This is the initial version of the project. More skill directories, templates, examples, and contribution guidelines will be added over time.

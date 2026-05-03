@@ -18,6 +18,10 @@ Skilful Skill 是一个用于整理、维护和分发多种 AI skills 的项目�
 - 文件命名和目录结构应保持稳定，方便 agent 检索。
 - 重要行为应显式写出，减少隐含假设。
 
+## Skills
+
+- [`mvp-creator`](skills/mvp-creator/SKILL.md)：用于规划、初始化和扩展 TypeScript MVP 项目，覆盖 Web frontend、Backend、Fullstack、Electron 和 React Native 工作流。
+
 ## 当前状态
 
-这是项目的初始版本。后续会逐步添加 skill 目录、模板、示例和贡献说明。
+这是项目的初始版本。后续会逐步添加更多 skill 目录、模板、示例和贡献说明。
