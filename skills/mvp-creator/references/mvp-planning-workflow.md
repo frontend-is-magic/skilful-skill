@@ -12,6 +12,10 @@ Before writing an MVP technical plan, determine the document language:
 
 Use the selected language for all prose and visible section titles in `technical-plan.md`. Keep code, commands, paths, package names, API names, config keys, and error messages in their original English form.
 
+## Planning Boundary
+
+This workflow creates planning documents only. Do not install packages, generate application scaffolds, write product source code, run codegen, or create migrations.
+
 ## Project State
 
 Treat the project as MVP 1 when:
@@ -42,6 +46,17 @@ For a new project, propose 2-3 codename series based on product tone, domain, an
 Ask the user to confirm the series before creating the first MVP directory. Use `docs/mvp-<codename>/` for each phase. Do not use numeric fallback directories such as `docs/mvp-01/` or `docs/mvp-02/`.
 
 Record the chosen series and used codenames in `AGENTS.md`.
+
+## MVP 1 Git Setup
+
+For MVP 1 only, this skill may prepare the repository's Git environment before writing planning docs:
+
+- Run `git init` if the repository is not already initialized.
+- Set the default branch to `main`.
+- Create `develop` as the integration branch when the user wants the standard branch model.
+- Record remote policy, branch policy, and release flow in `AGENTS.md`.
+
+This Git setup must stop at repository and branch metadata. Do not create application source files, install dependencies, scaffold apps, run codegen, create migrations, or make development commits beyond planning documents.
 
 ## Technical Plan Confirmation
 
@@ -99,7 +114,7 @@ Each MVP technical plan lives at `docs/mvp-<codename>/technical-plan.md` and act
 
 ## Release Planning
 
-Every MVP must include an executable release checklist:
+Every MVP must include a release checklist for future execution:
 
 - Branch path.
 - Required checks.

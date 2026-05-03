@@ -1,10 +1,10 @@
 # Code Style Baseline
 
-Use this reference for TypeScript implementation, review, and AGENTS.md code style sections.
+Use this reference when documenting TypeScript code style expectations in AGENTS.md and task specifications.
 
 ## Core Rule
 
-Write declarative functional TypeScript. Business logic defaults to pure functions, immutable data, typed outcomes, and function composition. Imperative flow and OOP are exceptions, not defaults.
+Future implementation should use declarative functional TypeScript. Business logic defaults to pure functions, immutable data, typed outcomes, and function composition. Imperative flow and OOP are exceptions, not defaults.
 
 ## Mandatory Rules
 
@@ -21,7 +21,7 @@ Write declarative functional TypeScript. Business logic defaults to pure functio
 
 ## Result Shape
 
-Use a small helper in `packages/utils` unless the project already has one:
+Recommend a small helper in `packages/utils` unless the project already has one:
 
 ```ts
 export type Result<T, E = Error> =
@@ -52,7 +52,7 @@ Automate rules where practical:
 - Disallow unused variables and floating promises.
 - Enforce import ordering.
 
-Use review checklist for rules that are hard to automate: pure boundaries, meaningful Result usage, overuse of classes, and hidden mutation.
+Record a future review checklist for rules that are hard to automate: pure boundaries, meaningful Result usage, overuse of classes, and hidden mutation.
 
 ## Exceptions
 

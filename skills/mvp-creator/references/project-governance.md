@@ -1,15 +1,15 @@
 # Project Governance
 
-Use this reference for Git, PR, commit, release, emergency release, and branch policy.
+Use this reference when documenting Git, PR, commit, release, emergency release, and branch policy in planning artifacts.
 
 ## Branch Model
 
-- The first project bootstrap commit may be made directly on `main`.
-- After bootstrap, `main` is the stable branch and should not be used for daily development.
+- The first planning and Git setup commit may be made directly on `main`.
+- After initial planning and Git setup, `main` is the stable branch and should not be used for daily development.
 - Use `develop` as the integration branch.
 - Use `feat/xxx` for regular feature work and merge into `develop`.
 - Small changes may be merged locally into `develop` when risk is low and scope is clear.
-- Larger features, risky changes, cross-module work, and release candidates should use PR review.
+- Future larger features, risky changes, cross-module work, and release candidates should use PR review.
 - Final release flow: open PR from `develop` to `main`.
 
 ## Merge Strategy
@@ -49,11 +49,11 @@ For `develop -> main` PRs, include:
 - Risks, rollout notes, or rollback plan.
 - Linked issue/task when one exists.
 
-Feature PRs into `develop` may use a lighter description, but should still state what changed and how it was checked.
+Feature PRs into `develop` may use a lighter description, but should still state what changed and how it was checked. Record this as future implementation guidance only.
 
 ## MVP Release Plan
 
-Every MVP technical plan and `AGENTS.md` release section should include an executable checklist:
+Every MVP technical plan and `AGENTS.md` release section should include a future execution checklist:
 
 - Source and target branches.
 - Required checks selected by project risk.
@@ -71,8 +71,8 @@ Normal release flow: PR from `develop` to `main`.
 Default hotfix flow:
 
 1. Branch from `main` as `hotfix/xxx`.
-2. Apply the smallest safe fix.
-3. Run required verification for the affected scope.
+2. Apply the smallest safe fix in the implementation phase.
+3. Run required verification for the affected scope in the implementation phase.
 4. PR back to `main`.
 5. Release from `main`.
 6. Sync the fix back to `develop`.

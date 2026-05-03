@@ -1,6 +1,6 @@
 # Coding Standards
 
-Use together with `code-style-baseline.md` when writing AGENTS.md or reviewing implementation.
+Use together with `code-style-baseline.md` when documenting AGENTS.md code standards and task specifications.
 
 ## TypeScript
 
@@ -20,7 +20,7 @@ Default Prettier baseline:
 - Trailing commas where valid.
 - Print width 100.
 
-Use `format` for writing changes and `format:check` for CI.
+Document `format` for future write-time formatting and `format:check` for CI.
 
 ## ESLint
 

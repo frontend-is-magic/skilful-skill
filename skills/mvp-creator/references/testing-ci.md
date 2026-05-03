@@ -1,6 +1,6 @@
 # Testing And CI
 
-Use this reference for AGENTS.md verification commands, task docs, and PR gates.
+Use this reference when documenting AGENTS.md verification commands, task docs, and PR gates for future implementation work.
 
 ## Test Layers
 
@@ -12,12 +12,12 @@ Use this reference for AGENTS.md verification commands, task docs, and PR gates.
 ## Default Tools
 
 - Use Vitest for frontend/shared packages unless the repo already uses Jest.
-- Use Jest or the NestJS default test setup for backend if already scaffolded.
+- Use Jest or the NestJS default test setup for backend when the planned or existing stack uses NestJS.
 - Use Playwright for browser E2E when Web UI exists.
 
 ## CI Gates
 
-Choose required gates by project risk. Candidate root commands:
+Choose planned required gates by project risk. Candidate root commands:
 
 ```text
 pnpm typecheck
@@ -28,7 +28,7 @@ pnpm build
 pnpm test:e2e
 ```
 
-For `develop -> main`, include verification results in the PR. If a gate is intentionally skipped, record why.
+For future `develop -> main` PRs, require verification results in the PR. If a gate is intentionally skipped, record why.
 
 ## Acceptance Criteria
 

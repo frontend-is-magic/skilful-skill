@@ -1,10 +1,12 @@
 # Task Docs Workflow
 
-Use this reference after the current MVP technical plan exists or while writing it. Task docs belong to one MVP phase and are controlled by that phase's `technical-plan.md`.
+Use this reference after the current MVP technical plan exists or while writing it. Task docs are planning artifacts for one MVP phase and are controlled by that phase's `technical-plan.md`.
 
 ## Goal
 
-Turn the confirmed MVP technical plan into executable module-level task specs under `docs/mvp-<codename>/`.
+Turn the confirmed MVP technical plan into implementation-ready planning specs under `docs/mvp-<codename>/`.
+
+Task docs are handoff specifications only. Do not implement the tasks while using this skill.
 
 ## Document Language
 
@@ -76,11 +78,11 @@ docs/mvp-<codename>/02-web-frontend.md
 docs/mvp-<codename>/03-backend-api.md
 ```
 
-Order by dependency flow: setup before API, API/data before clients, implementation before tests/deploy.
+Order by dependency flow: setup before API, API/data before clients, product work before tests/deploy.
 
 ## Confirmation Guidance
 
-For each dimension, confirm only details that affect implementation:
+For each dimension, confirm only details that affect future implementation:
 
 - Scope included/excluded.
 - Inputs/outputs or public interfaces.

@@ -1,6 +1,8 @@
 # Project Templates
 
-Use these as starting templates. Trim unused pieces by project type. MVP docs are organized by phase and codename.
+Use these as planning templates. Trim unused pieces by project type. MVP docs are organized by phase and codename.
+
+These templates describe planned structure and governance. Do not create application files, package files, or scaffolded source code while using this skill.
 
 ## Monorepo Layout
 
@@ -26,7 +28,7 @@ Use these as starting templates. Trim unused pieces by project type. MVP docs ar
 
 ## Standard Scripts
 
-Use this vocabulary at root when available:
+Use this vocabulary as planned root commands when available:
 
 ```json
 {
@@ -43,7 +45,7 @@ Use this vocabulary at root when available:
 }
 ```
 
-For single-app repositories, keep the same command names but map them directly to that app's tooling.
+For single-app repositories, plan the same command names but map them directly to that app's tooling. Recording this vocabulary does not require creating or editing `package.json`.
 
 ## Env Files
 
