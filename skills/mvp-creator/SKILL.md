@@ -63,6 +63,7 @@ Keep code, commands, paths, package names, API names, config keys, and error mes
 - Do not skip repository inspection and project classification.
 - Do not write an MVP technical plan before confirming its major sections with the user.
 - Do not plan MVP 2+ without reading `AGENTS.md`, the previous MVP technical plan, related docs, and relevant code.
+- Do not create an MVP technical plan or task docs until the current MVP phase has a confirmed codename.
 - Do not generate task docs outside the current MVP docs directory.
 - Do not invent decisions. Put unknowns into `To Confirm`.
 - Do not ignore existing repository conventions; record any intentional migration from existing practice.

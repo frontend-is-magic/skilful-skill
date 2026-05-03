@@ -31,13 +31,15 @@ After reading, summarize discovered architecture, completed scope, unresolved ri
 
 ## Codename Series
 
+Every MVP phase must have a confirmed codename before its technical plan or task docs are created.
+
 For a new project, propose 2-3 codename series based on product tone, domain, and visual style. Examples:
 
 - Nordic myth realms for austere or mythical products.
 - Space mission names for science, exploration, or infrastructure products.
 - Studio album/session names for creative tools.
 
-Ask the user to confirm the series before creating the first MVP directory. Use `docs/mvp-<codename>/` for each phase. Fall back to `docs/mvp-01/`, `docs/mvp-02/` only when no codename series is chosen.
+Ask the user to confirm the series before creating the first MVP directory. Use `docs/mvp-<codename>/` for each phase. Do not use numeric fallback directories such as `docs/mvp-01/` or `docs/mvp-02/`.
 
 Record the chosen series and used codenames in `AGENTS.md`.
 
