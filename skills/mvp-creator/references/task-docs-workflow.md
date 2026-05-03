@@ -22,7 +22,9 @@ Name the unresolved-decisions section in the selected language. Use `To Confirm`
 4. Confirm details dimension by dimension.
 5. Generate one Markdown file per task in the same MVP directory.
 6. Add or update the task index in `technical-plan.md`.
-7. Put unresolved decisions into `To Confirm`; do not invent them.
+7. Add or update `Task Phases And Parallelization` in `technical-plan.md`.
+8. Put unresolved decisions into `To Confirm`; do not invent them.
+9. End with a Task Phase Handoff Summary; do not start implementation.
 
 ## Default Dimensions
 
@@ -79,6 +81,27 @@ docs/mvp-<codename>/03-backend-api.md
 ```
 
 Order by dependency flow: setup before API, API/data before clients, product work before tests/deploy.
+
+## Task Phase Handoff Summary
+
+After generating task docs, provide a final handoff summary. This summary is not an execution trigger.
+
+Group task docs into dependency phases such as:
+
+- Setup and governance.
+- Contracts and data.
+- Feature surfaces.
+- Quality and release.
+
+For each phase, list:
+
+- Phase name.
+- Dependent prerequisites.
+- Task doc filenames.
+- Tasks that can run in parallel.
+- Tasks that must wait for prior phases.
+
+After the summary, stop. If the user wants development work, require a separate explicit request.
 
 ## Confirmation Guidance
 

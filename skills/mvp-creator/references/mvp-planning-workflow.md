@@ -14,7 +14,7 @@ Use the selected language for all prose and visible section titles in `technical
 
 ## Planning Boundary
 
-This workflow creates planning documents only. Do not install packages, generate application scaffolds, write product source code, run codegen, or create migrations.
+This workflow creates planning documents only. Do not install packages, generate application scaffolds, write product source code, run codegen, create migrations, start development, launch implementation agents, or execute generated tasks.
 
 ## Project State
 
@@ -99,6 +99,8 @@ Each MVP technical plan lives at `docs/mvp-<codename>/technical-plan.md` and act
 
 ## Task Docs Index
 
+## Task Phases And Parallelization
+
 ## AI Work Guidance
 
 ## Acceptance Criteria
@@ -111,6 +113,8 @@ Each MVP technical plan lives at `docs/mvp-<codename>/technical-plan.md` and act
 
 ## To Confirm
 ```
+
+After task docs are generated, update `Task Phases And Parallelization` with the planned dependency phases and per-phase parallel task groups.
 
 ## Release Planning
 

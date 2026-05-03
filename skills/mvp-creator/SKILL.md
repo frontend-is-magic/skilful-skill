@@ -9,6 +9,8 @@ Use this skill to turn a TypeScript product idea or existing repository into sta
 
 This skill does not implement the MVP. It stops at implementation-ready plans and handoff guidance for other agents or humans.
 
+The only allowed outputs are `AGENTS.md`, `docs/mvp-<codename>/technical-plan.md`, per-task docs under `docs/mvp-<codename>/`, and the final Task Phase Handoff Summary.
+
 ## Document Language
 
 Before generating `AGENTS.md`, MVP technical plans, task docs, release plans, or emergency release plans, choose one document language for all visible prose:
@@ -32,7 +34,7 @@ Keep code, commands, paths, package names, API names, config keys, and error mes
 7. Generate or update `AGENTS.md` with project standards, MVP docs index, release plan, emergency release plan, command vocabulary, code style standards, Git workflow, and verification rules.
 8. Generate the current MVP technical plan at `docs/mvp-<codename>/technical-plan.md`.
 9. Load `references/task-docs-workflow.md`; generate this MVP's module-level task specification docs in the same `docs/mvp-<codename>/` directory.
-10. Handoff to implementation agents or humans using the generated plan; do not continue into development execution.
+10. Generate the final Task Phase Handoff Summary, listing task phases and which task docs can run in parallel in each phase, then stop. Do not continue into development execution.
 
 ## Defaults
 
@@ -72,6 +74,10 @@ Keep code, commands, paths, package names, API names, config keys, and error mes
 - Do not install dependencies, scaffold apps, run codegen, create migrations, or implement features.
 - For MVP 1 only, Git setup may initialize repository metadata and branches, but must not bootstrap application code.
 - Generated task docs are implementation specifications, not permission to implement them.
+- Do not begin programming after generating the MVP plan.
+- Do not execute tasks from the generated task docs.
+- The final response must list generated or updated planning documents and task phases with parallelizable tasks.
+- If the user wants implementation, require a separate explicit request after the planning output.
 - Do not generate task docs outside the current MVP docs directory.
 - Do not invent decisions. Put unknowns into `To Confirm`.
 - Do not ignore existing repository conventions; record any intentional migration from existing practice.

@@ -1,4 +1,4 @@
 interface:
   display_name: "MVP Creator"
   short_description: "Plan MVP technical roadmaps and task documents"
-  default_prompt: "Use $mvp-creator to create MVP planning documents without doing implementation work."
+  default_prompt: "Use $mvp-creator to create only MVP planning docs, end with task phases and parallelization, then stop without implementation."
