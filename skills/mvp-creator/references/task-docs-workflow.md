@@ -31,6 +31,7 @@ Name the unresolved-decisions section in the selected language. Use `To Confirm`
 Use only dimensions relevant to the MVP:
 
 - Project setup and workspace.
+- Environment scripts.
 - Web frontend.
 - Backend API.
 - Data model and migrations.
@@ -102,6 +103,18 @@ For each phase, list:
 - Tasks that must wait for prior phases.
 
 After the summary, stop. If the user wants development work, require a separate explicit request.
+
+## Environment Script Task Requirements
+
+If the MVP includes local setup or local startup, include a task doc that covers `init.sh`, `init.ps1`, `start.sh`, and `start.ps1`.
+
+The task acceptance criteria must state:
+
+- All four root scripts are planned outputs.
+- Shell and PowerShell versions are semantically equivalent.
+- `init` scripts handle one-time local environment setup.
+- `start` scripts handle local development startup.
+- The responsibilities of `init` and `start` are not mixed.
 
 ## Confirmation Guidance
 

@@ -10,6 +10,10 @@ These templates describe planned structure and governance. Do not create applica
 .
 |-- AGENTS.md
 |-- docs/
+|-- init.sh
+|-- init.ps1
+|-- start.sh
+|-- start.ps1
 |-- package.json
 |-- pnpm-workspace.yaml
 |-- turbo.json
@@ -47,6 +51,15 @@ Use this vocabulary as planned root commands when available:
 
 For single-app repositories, plan the same command names but map them directly to that app's tooling. Recording this vocabulary does not require creating or editing `package.json`.
 
+## Required Root Scripts
+
+Every project plan must require these root-level scripts as implementation deliverables:
+
+- `init.sh` and `init.ps1`: one-time environment setup entrypoints.
+- `start.sh` and `start.ps1`: local development startup entrypoints.
+
+The shell and PowerShell versions must be semantically equivalent. `init` scripts prepare the local environment, such as dependency installation, environment checks, and required local service setup. `start` scripts start the local development environment. Planning these scripts does not permit this skill to create or execute them.
+
 ## Env Files
 
 - Keep `.env.example` in every app that reads environment variables.
@@ -62,6 +75,7 @@ Include:
 - Stack and package manager.
 - Directory ownership.
 - Commands.
+- Environment setup and local start scripts.
 - Code style baseline and formatting.
 - Git workflow and branch policy.
 - Testing and CI gates.

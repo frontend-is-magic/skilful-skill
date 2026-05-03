@@ -31,7 +31,7 @@ Keep code, commands, paths, package names, API names, config keys, and error mes
 4. Confirm the current MVP phase codename before creating any MVP docs.
 5. For MVP 1 only, perform allowed Git setup when needed: initialize the repository, set `main`, create `develop`, and document branch policy. Do not bootstrap application code.
 6. Load `references/mvp-planning-workflow.md`, `references/baseline-stack.md`, and `references/new-repo-questionnaire.md`; confirm technical plan details section by section with the user.
-7. Generate or update `AGENTS.md` with project standards, MVP docs index, release plan, emergency release plan, command vocabulary, code style standards, Git workflow, and verification rules.
+7. Generate or update `AGENTS.md` with project standards, MVP docs index, release plan, emergency release plan, command vocabulary, required environment initialization and local start scripts, code style standards, Git workflow, and verification rules.
 8. Generate the current MVP technical plan at `docs/mvp-<codename>/technical-plan.md`.
 9. Load `references/task-docs-workflow.md`; generate this MVP's module-level task specification docs in the same `docs/mvp-<codename>/` directory.
 10. Generate the final Task Phase Handoff Summary, listing task phases and which task docs can run in parallel in each phase, then stop. Do not continue into development execution.
@@ -49,6 +49,7 @@ Keep code, commands, paths, package names, API names, config keys, and error mes
 - API contract: REST + OpenAPI when frontend and backend communicate.
 - UI: Tailwind CSS + shadcn/ui for React surfaces.
 - Quality: ESLint + Prettier, with `typecheck`, `lint`, `format:check`, `test`, and `build` as the standard check vocabulary.
+- Required root scripts: every planned project must include `init.sh`, `init.ps1`, `start.sh`, and `start.ps1` as implementation deliverables.
 
 ## Reference Guide
 
@@ -72,6 +73,7 @@ Keep code, commands, paths, package names, API names, config keys, and error mes
 - Do not create an MVP technical plan or task docs until the current MVP phase has a confirmed codename.
 - Do not write or modify product source code.
 - Do not install dependencies, scaffold apps, run codegen, create migrations, or implement features.
+- Do not create or execute `init.sh`, `init.ps1`, `start.sh`, or `start.ps1`; only plan them as required project deliverables.
 - For MVP 1 only, Git setup may initialize repository metadata and branches, but must not bootstrap application code.
 - Generated task docs are implementation specifications, not permission to implement them.
 - Do not begin programming after generating the MVP plan.

@@ -68,6 +68,7 @@ Required sections to confirm:
 - Project type and target platforms.
 - User/system workflows.
 - Architecture and package boundaries.
+- Environment initialization and local start scripts.
 - Data model, persistence, and migrations.
 - API contract and integration boundaries.
 - Authentication and authorization.
@@ -95,6 +96,8 @@ Each MVP technical plan lives at `docs/mvp-<codename>/technical-plan.md` and act
 
 ## Architecture and Directory Structure
 
+## Environment Scripts
+
 ## Data and Interfaces
 
 ## Task Docs Index
@@ -115,6 +118,8 @@ Each MVP technical plan lives at `docs/mvp-<codename>/technical-plan.md` and act
 ```
 
 After task docs are generated, update `Task Phases And Parallelization` with the planned dependency phases and per-phase parallel task groups.
+
+The `Environment Scripts` section must define the planned responsibilities, prerequisites, platform differences, and acceptance checks for `init.sh`, `init.ps1`, `start.sh`, and `start.ps1`. Place script planning in the setup and governance phase by default.
 
 ## Release Planning
 
