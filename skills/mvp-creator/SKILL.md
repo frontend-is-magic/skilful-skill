@@ -21,16 +21,30 @@ Before generating `AGENTS.md`, MVP technical plans, task docs, release plans, or
 
 Keep code, commands, paths, package names, API names, config keys, and error messages in their original English form.
 
+## Question Interaction Policy
+
+Before asking the user anything, inspect the repository and the user's product description. Ask only for decisions that cannot be inferred and that affect future planning or implementation.
+
+When a decision can be expressed as finite choices, presenting choices is mandatory:
+
+- In Codex App, use `request_user_input` when it is available.
+- In Claude environments, use `AskUserQuestion` when it is available.
+- In other environments, or when no native choice tool is available, present numbered text options and include an `Other / custom` option.
+
+Keep each question pass to 1-3 important decisions. Put the recommended option first, mark it as recommended, and explain the tradeoff briefly. Use open-ended questions only for workflows, domain details, or user goals that cannot be reduced to a useful choice set.
+
+When a platform-specific decision is needed, tailor the options to the classified project type. Do not ask Web-only questions for Electron or React Native projects unless the repository or user request includes a Web surface.
+
 ## Core Workflow
 
 1. Inspect the repository first: source files, package manager, apps/packages, framework, scripts, lint/format/test/build config, Git branches, `AGENTS.md`, and existing `docs/mvp-*` documents.
 2. Decide whether this is a first MVP or a later MVP:
    - Treat an empty/unstarted project as MVP 1 when there is no major source code, or when `AGENTS.md` or MVP docs are missing.
    - For MVP 2 and later, read `AGENTS.md`, the previous MVP technical plan, related docs, code structure, and key implementations before planning.
-3. Classify the project as `Web frontend`, `Backend`, `Fullstack`, `Electron`, or `React Native`. If unclear, ask the minimum question needed to classify it.
-4. Confirm the current MVP phase codename before creating any MVP docs.
+3. Classify the project as `Web frontend`, `Backend`, `Fullstack`, `Electron`, or `React Native`. If unclear, ask the minimum choice-based question needed to classify it.
+4. Confirm the current MVP phase codename before creating any MVP docs, using mandatory choice-based confirmation unless no useful finite choice set exists.
 5. For MVP 1 only, perform allowed Git setup when needed: initialize the repository, set `main`, create `develop`, and document branch policy. Do not bootstrap application code.
-6. Load `references/mvp-planning-workflow.md`, `references/baseline-stack.md`, and `references/new-repo-questionnaire.md`; confirm technical plan details section by section with the user.
+6. Load `references/mvp-planning-workflow.md`, `references/baseline-stack.md`, and `references/new-repo-questionnaire.md`; confirm technical plan details section by section with the user using the Question Interaction Policy.
 7. Generate or update `AGENTS.md` with project standards, MVP docs index, release plan, emergency release plan, command vocabulary, required environment initialization and local start scripts, code style standards, Git workflow, and verification rules.
 8. Generate the current MVP technical plan at `docs/mvp-<codename>/technical-plan.md`.
 9. Load `references/task-docs-workflow.md`; generate this MVP's module-level task specification docs in the same `docs/mvp-<codename>/` directory.
@@ -55,7 +69,7 @@ Keep code, commands, paths, package names, API names, config keys, and error mes
 
 - `references/mvp-planning-workflow.md`: MVP phase detection, codename series, technical plan questions, and plan template.
 - `references/baseline-stack.md`: default stack, project type classification, directories, package boundaries.
-- `references/new-repo-questionnaire.md`: concise question sets for Web, Backend, Fullstack, Electron, and React Native projects.
+- `references/new-repo-questionnaire.md`: mandatory choice-based question sets for Web, Backend, Fullstack, Electron, and React Native projects.
 - `references/project-templates.md`: directory templates, scripts, env files, and AGENTS.md outline.
 - `references/code-style-baseline.md`: mandatory functional TypeScript style rules.
 - `references/project-governance.md`: Git branches, PRs, release, emergency hotfix, and CI governance.
@@ -69,6 +83,8 @@ Keep code, commands, paths, package names, API names, config keys, and error mes
 - Do not default to Next.js.
 - Do not skip repository inspection and project classification.
 - Do not write an MVP technical plan before confirming its major sections with the user.
+- Do not ask open-ended questions for decisions that can be represented as useful choices.
+- Do not bypass native choice tools when they are available and the decision can be represented as finite choices.
 - Do not plan MVP 2+ without reading `AGENTS.md`, the previous MVP technical plan, related docs, and relevant code.
 - Do not create an MVP technical plan or task docs until the current MVP phase has a confirmed codename.
 - Do not write or modify product source code.

@@ -58,6 +58,26 @@ For MVP 1 only, this skill may prepare the repository's Git environment before w
 
 This Git setup must stop at repository and branch metadata. Do not create application source files, install dependencies, scaffold apps, run codegen, create migrations, or make development commits beyond planning documents.
 
+## Confirmation Interaction
+
+Confirm each planning section with the native choice mechanism required by `SKILL.md` for every decision that can be represented as finite choices. Use open-ended prompts only for product workflows, domain language, business rules, or goals that cannot be reduced to a helpful option set.
+
+Require choice-based confirmation for:
+
+- Document language when it is unclear.
+- Project type and target platform.
+- MVP codename series and current codename.
+- Deployment/runtime target.
+- Authentication and authorization depth.
+- Persistence, storage, external APIs, jobs, and realtime scope.
+- API contract and integration boundary.
+- UI/design/accessibility constraints.
+- Testing and CI gate level.
+- Normal release and emergency release flow.
+- Task dimensions, sequencing, and parallelization.
+
+For each choice set, put the recommended default first and explain the tradeoff briefly. If a native choice tool supports only single-select, ask the user to select the closest option and add exceptions in free text. Keep unresolved or skipped decisions in `To Confirm`; do not invent decisions to avoid asking.
+
 ## Technical Plan Confirmation
 
 Confirm the technical plan section by section. Do not batch all decisions into one unresolved blob.
