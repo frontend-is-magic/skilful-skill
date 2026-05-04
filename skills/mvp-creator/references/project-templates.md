@@ -68,6 +68,16 @@ The shell and PowerShell versions must be semantically equivalent. `init` script
 
 ## AGENTS.md Outline
 
+`AGENTS.md` must begin with a current MVP notice before any other project guidance. This prevents future agents from confusing the active MVP phase with previous or planned phases.
+
+The first visible block must include:
+
+- Current MVP: ordinal number plus codename, such as `MVP 2 / Helios`.
+- Current status: `planning`, `ready for implementation`, `in progress`, `released`, or another user-confirmed status.
+- Current technical plan: `docs/mvp-<codename>/technical-plan.md`.
+- Current task docs directory: `docs/mvp-<codename>/`.
+- Instruction that agents must treat this notice as the source of truth for active-phase planning unless the user explicitly updates it.
+
 Include:
 
 - Document Language: selected by conversation language, then user system/environment language, then explicit user choice.

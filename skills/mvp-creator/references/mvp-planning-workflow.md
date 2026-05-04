@@ -45,7 +45,7 @@ For a new project, propose 2-3 codename series based on product tone, domain, an
 
 Ask the user to confirm the series before creating the first MVP directory. Use `docs/mvp-<codename>/` for each phase. Do not use numeric fallback directories such as `docs/mvp-01/` or `docs/mvp-02/`.
 
-Record the chosen series and used codenames in `AGENTS.md`.
+Record the chosen series and used codenames in `AGENTS.md`. Also update the top-of-file current MVP notice so it names the active MVP number, codename, status, technical plan path, and task docs directory.
 
 ## MVP 1 Git Setup
 

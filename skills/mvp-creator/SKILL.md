@@ -45,7 +45,7 @@ When a platform-specific decision is needed, tailor the options to the classifie
 4. Confirm the current MVP phase codename before creating any MVP docs, using mandatory choice-based confirmation unless no useful finite choice set exists.
 5. For MVP 1 only, perform allowed Git setup when needed: initialize the repository, set `main`, create `develop`, and document branch policy. Do not bootstrap application code.
 6. Load `references/mvp-planning-workflow.md`, `references/baseline-stack.md`, and `references/new-repo-questionnaire.md`; confirm technical plan details section by section with the user using the Question Interaction Policy.
-7. Generate or update `AGENTS.md` with project standards, MVP docs index, release plan, emergency release plan, command vocabulary, required environment initialization and local start scripts, code style standards, Git workflow, and verification rules.
+7. Generate or update `AGENTS.md` with a top-of-file current MVP notice, project standards, MVP docs index, release plan, emergency release plan, command vocabulary, required environment initialization and local start scripts, code style standards, Git workflow, and verification rules.
 8. Generate the current MVP technical plan at `docs/mvp-<codename>/technical-plan.md`.
 9. Load `references/task-docs-workflow.md`; generate this MVP's module-level task specification docs in the same `docs/mvp-<codename>/` directory.
 10. Generate the final Task Phase Handoff Summary, listing task phases and which task docs can run in parallel in each phase, then stop. Do not continue into development execution.
@@ -87,6 +87,7 @@ When a platform-specific decision is needed, tailor the options to the classifie
 - Do not bypass native choice tools when they are available and the decision can be represented as finite choices.
 - Do not plan MVP 2+ without reading `AGENTS.md`, the previous MVP technical plan, related docs, and relevant code.
 - Do not create an MVP technical plan or task docs until the current MVP phase has a confirmed codename.
+- Do not generate or update `AGENTS.md` without putting the current MVP number, codename, status, and current technical plan path at the very top of the file.
 - Do not write or modify product source code.
 - Do not install dependencies, scaffold apps, run codegen, create migrations, or implement features.
 - Do not create or execute `init.sh`, `init.ps1`, `start.sh`, or `start.ps1`; only plan them as required project deliverables.
